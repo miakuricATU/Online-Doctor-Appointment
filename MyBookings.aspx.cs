@@ -45,7 +45,7 @@ namespace DoctorAppointment
 
                 DateTime todayDate = DateTime.Now;
                 string insertQuery = "select * from dbo.ease_bookings where " +
-                    "member_email = '" + email.Trim() + "' AND date >= CONVERT(DATE,GETDATE());";
+                    "member_email = '" + email.Trim() + "'";
 
                 SqlCommand cmd = new SqlCommand(insertQuery, con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
